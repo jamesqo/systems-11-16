@@ -25,6 +25,7 @@ int main() {
       exit(EXIT_FAILURE);
     }
     printf("A child just finished. Child PID: %ld\n", (long)getpid());
+    printf("DEBUG: Did the child exit normally? %d\n", WIFEXITED(wstatus));
     int number_of_seconds_it_slept = WEXITSTATUS(wstatus);
     printf("It slept for this many seconds: %d\n", number_of_seconds_it_slept);
     printf("The parent is done.\n");
