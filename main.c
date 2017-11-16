@@ -14,7 +14,7 @@ int main() {
   // TODO: Check if fork() returns -1 and handle accordingly
   if (fork() == 0 || fork() == 0) {
     // We're the child.
-    child_proc_main();
+    return child_proc_main();
   }
   else {
     // We're the parent. Wait for any child to finish.
